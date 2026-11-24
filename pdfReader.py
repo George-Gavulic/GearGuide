@@ -17,7 +17,7 @@ def process_pdfs():
         file_path = os.path.join(dir_path, path)
         reader = PdfReader(file_path)
         print(f"Processing '{path}' - Pages: {len(reader.pages)}")
-        tempstart =0
+        tempstart = 0
         tempstop = 12
         extract_images(reader, output_dir, tempstart, tempstop)
         # extract_sections(reader, tempstart, tempstop)
