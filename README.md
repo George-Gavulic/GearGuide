@@ -32,26 +32,39 @@ pip install docling-ibm-models
 pip install "docling[all]"
 
 
-1.2
-PyMuPDF4LLM 
+1.2 
+embeddings (huggingface)
 
-pip install pymupdf4llm
-so many installs could not get working
+uv add "langchain-huggingface[full]"
+or pip install "langchain-huggingface[full]"
 
+uv add "sentence-transformers>=5.2.0"
 
-
-1.3 
-unstructured
-# Install package, compatible with API partitioning
-pip install -qU langchain-unstructured unstructured-client unstructured "unstructured[pdf]" python-magic
-
-
-pip install "langchain-unstructured[local]"
-
-
+1.3
+chroma
+pip install langchain-chroma
 
 
 
 Step 2 look at mem usage for each step
 pip install psutil
+
+
+
+
+
+
+
+
+
+
+
+cd Documents\GitHub\GearGuide
+Remove-Item -Recurse -Force venv
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+pip install langchain-docling docling langchain-huggingface langchain-chroma psutil sentence-transformers
+
 
